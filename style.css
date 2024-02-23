@@ -1,0 +1,105 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0; 
+}
+
+button {
+    padding: 10px 40px;
+    background-color: #f4d7d7; 
+    border: 2px solid #d3b8b8; 
+    color: #5a2a2a; 
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px; 
+    position: relative; 
+    margin-bottom: 20px;
+    margin-right: 16px;
+    transition: background-color 0.3s;
+}
+
+button:before, button:after {
+    content: '';
+    background-color: #f4d7d7;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button:before {
+    left: -10px;
+}
+
+button:after {
+    right: -10px;
+}
+
+
+button:before, button:after, button:before:before, button:before:after, button:after:before, button:after:after {
+    content: '';
+    position: absolute;
+    background-color: #f4d7d7;
+    border: 2px solid #d3b8b8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+button:before:before, button:before:after {
+    top: -15px;
+    left: 0;
+}
+
+button:before:after {
+    top: auto;
+    bottom: -15px;
+}
+
+button:after:before, button:after:after {
+    top: -15px;
+    right: 0;
+}
+
+button:after:after {
+    top: auto;
+    bottom: -15px;
+}
+
+
+button:hover {
+    background-color: #e8c0c0; 
+}
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    background-color: #f4f4f4; 
+    color: #666; 
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
