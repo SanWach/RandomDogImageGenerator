@@ -1,4 +1,4 @@
-# Dog Image Generator
+# Dog Image Generator V2.0.0
 
 ## Description
 
@@ -8,6 +8,7 @@ The Dog Image Generator is a simple web application designed to delight users by
 
 - **Generate Button**: Click to display a random dog image.
 - **Download Button**: Download the currently displayed dog image. (You need to run it on your server for it to work)
+- **Theme Toggle**: Switch between light and dark mode to suit your viewing preference.
 
 ## Setup
 
@@ -29,14 +30,20 @@ You can simply double-click the file or use a live server feature provided by co
 
 - Click the **Show me a dog!** button to generate and display a random dog image.
 - After an image appears, the **Download** button will be visible. Click it to download the image to your device. The button text changes to **Wooff!** as feedback for a successful action.
-- Enjoy endless random dog images with just a click!
+- Use the **Toggle Theme** button in the footer to switch between light and dark modes.
 
 ## Technologies
 
 - HTML5
-- CSS3
+- CSS3 (Until V2.0.0)
+- Tailwind CSS (Starting V2.0.0)
 - JavaScript
 - External API: [Dog CEO's Dog API](https://dog.ceo/dog-api/) for random dog images.
+
+## Disclaimer
+
+The Dog Image Generator uses the Dog CEO's Dog API to fetch random dog images. While the API generally provides dog-related content, the nature of the content is controlled by the API provider and not by the Dog Image Generator project. We do not curate, monitor, or have any control over the images provided. As such, the Dog Image Generator and its developers take no responsibility for any images displayed by the application. Users are advised to use this application at their own risk.
+
 
 ## Contributing
 

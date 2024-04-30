@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RanDOG - Random Dog Generator</title>
+    <!-- Include Tailwind CSS from jsDelivr -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.11/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+      --bg-color: #f0f0f0;  
+      --button-bg-color: #f4d7d7; 
+      --button-text-color: #5a2a2a;  
+      --download-button-bg-color: #34D399;  
+      --text-color: #000000;
+    }
+  
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);  
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .disclaimer {
+    background-color: #f9f9f9; /* Slightly off-white background for less intrusiveness */
+    padding: 10px;
+    font-size: 12px; /* Small font for legal text */
+    border-top: 1px solid #ccc; /* A subtle line to separate it from content */
+}
+
+  </style> 
+<body>
+    <p class="disclaimer bg-gray-100 text-xs p-2 text-center">
+        Disclaimer: The Dog Image Generator (RandDog) uses the Dog CEO's Dog API to fetch random dog images. While the API generally provides dog-related content, the nature of the content is controlled by the API provider and not by the Dog Image Generator project. We do not curate, monitor, or have any control over the images provided. As such, the Dog Image Generator and its developers take no responsibility for any images displayed by the application. This software is open source and available on GitHub; users are welcome to fork, modify, and host their own versions, but do so at their own risk. The project and its maintainers are not responsible for modifications made by others. Users are advised to use this application at their own risk.
+    </p>
+    </body>
+    <footer class="text-center bg-gray-200 absolute bottom-0 w-full text-sm text-gray-600 flex justify-center items-center p-4">
+        <p class="flex-grow">| Random Dog Image Generator V2.0 | <a href="https://github.com/SanWach" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">View Source Code on Github</a> | API Provided by <a href="https://github.com/ElliottLandsborough/dog-ceo-api" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">DOG CEO</a> | <a href="disclaimer.html" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">Disclaimer</a> |</p>
+    </footer>
+</html>

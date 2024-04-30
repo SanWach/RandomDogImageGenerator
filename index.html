@@ -1,28 +1,57 @@
-<!-- 
-    Random Dog Image Generator
-    Description: A simple web application to display random dog images.
-    Author: Mr_Akihiro
-    Date: 2024
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RanDOG - Random Dog Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Include Tailwind CSS from jsDelivr -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.11/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --bg-color: #f0f0f0;  
+          --button-bg-color: #f4d7d7; 
+          --button-text-color: #5a2a2a;  
+          --download-button-bg-color: #34D399;  
+          --text-color: #000000;
+        }
+      
+        [data-theme="dark"] {
+          --bg-color: #171210; 
+          --button-bg-color: #FEF3C7;  
+          --button-text-color: #080306;  
+          --download-button-bg-color: #6EE7B7; 
+          --text-color: #ece6e4;
+        }
+      
+        body {
+          background-color: var(--bg-color);
+          color: var(--text-color);  
+          font-family: 'Poppins', sans-serif;
+        }
+      
+        #dogButton, #downloadButton {
+          background-color: var(--button-bg-color);  
+          color: var(--button-text-color); 
+        }
+      
+        #downloadButton {
+          background-color: var(--download-button-bg-color);  
+          color: var(--button-text-color); 
+        }
+      </style> 
+      
 </head>
-<body>
-    <h1>Sometimes we just need a Dog to be happy!</h1> 
-    <div class="container">
-        <div class="button-container">
-            <button id="dogButton">Show me a dog!</button>
-            <button id="downloadButton" style="display:none;">Download</button>
-        </div>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-4xl font-bold text-center mb-6">Sometimes we just need a Dog to be happy!</h1> 
+    <div class="flex justify-center items-center mb-4">
+        <button id="dogButton" class="bg-pink-300 hover:bg-pink-400 text-white font-bold py-2 px-4 sm:px-6 rounded-full transition duration-300 ease-in-out">Show me a dog!</button>
+        <button id="downloadButton" class="bg-green-300 hover:bg-green-400 text-white font-bold py-2 px-4 ml-3 sm:px-6 rounded-full transition duration-300 ease-in-out" style="display:none;">Download</button>
     </div>
-    <div id="dogImageContainer"></div>
-    <footer>
-        <p>Random Dog Image Generator V1.0 | <a href="https://github.com/SanWach" target="_blank" rel="noopener noreferrer">View Source Code on Github</a> | API Provided by <a href="https://github.com/ElliottLandsborough/dog-ceo-api" target="_blank" rel="noopener noreferrer">DOG CEO</a> </p>
+    <div id="dogImageContainer" class="w-full sm:w-96 md:w-144 h-80 sm:h-60 md:h-96 overflow-hidden flex justify-center items-center"></div>
+    <footer class="text-center bg-gray-200 absolute bottom-0 w-full text-sm text-gray-600 flex justify-center items-center p-4">
+        <p class="flex-grow">| Random Dog Image Generator V2.0 | <a href="https://github.com/SanWach" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">View Source Code on Github</a> | API Provided by <a href="https://github.com/ElliottLandsborough/dog-ceo-api" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">DOG CEO</a> | <a href="disclaimer.html" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600">Disclaimer</a> |</p>
+        <button id="themeToggle" class="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out ml-4">Toggle Theme</button>  
     </footer>
     <script src="script.js"></script>
 </body>
